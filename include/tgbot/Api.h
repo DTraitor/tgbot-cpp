@@ -27,7 +27,7 @@
 #include "tgbot/types/BotCommand.h"
 #include "tgbot/types/ForumTopic.h"
 
-#include <boost/property_tree/ptree.hpp>
+#include <rapidjson/document.h>
 #include <boost/variant.hpp>
 
 #include <cstdint>
@@ -1990,7 +1990,7 @@ public:
     const HttpClient& _httpClient;
     
 private:
-    boost::property_tree::ptree sendRequest(const std::string& method, const std::vector<HttpReqArg>& args = std::vector<HttpReqArg>()) const;
+    rapidjson::Document sendRequest(const std::string& method, const std::vector<HttpReqArg>& args = std::vector<HttpReqArg>()) const;
 
     const std::string _token;
     const TgTypeParser _tgTypeParser;

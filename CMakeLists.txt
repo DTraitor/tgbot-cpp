@@ -53,6 +53,9 @@ find_package(Threads REQUIRED)
 ## zlib
 find_package(ZLIB REQUIRED)
 
+## rapidjson
+find_package(RapidJSON REQUIRED)
+
 ## openssl
 find_package(OpenSSL REQUIRED)
 include_directories(${OPENSSL_INCLUDE_DIR})
@@ -81,6 +84,7 @@ set(LIB_LIST
     ${CMAKE_THREAD_LIBS_INIT}
     ${ZLIB_LIBRARIES}
     ${OPENSSL_LIBRARIES}
+    ${RapidJSON_LIBRARIES}
     ${Boost_LIBRARIES}
 )
 
